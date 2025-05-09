@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffee_shop</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei&family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--navbar section-->
+        <nav class="navbar">
+            <ul class="navbar_elements">
+                <li class="navbar_items"><a href="#Home" class="navbar_links">Home</a></li>
+                <li class="navbar_items"><a href="#Products" class="navbar_links">Products</a></li>
+                <li class="navbar_items"><a href="#About" class="navbar_links">About</a></li>
+                <li class="navbar_items"><a href="#Contact" class="navbar_links">Contact</a></li>
+            </ul>
+        </nav>
+    <!--end of navbar section-->
+    <!--home section-->
+    <section id="home">
+        <div class="home_text_">
+            <p>Helloo!</p>
+            <h1>We are</h1>
+            <h2><span>Kaldis </span>Coffee</h2>
+            <button>Products</button>
+        </div>
+        <img src="{%static 'image/coff.jpg'%}" height="850" width="750">
+    </section>
+    <!--end of home section-->
+<script src="{% static 'js/js.js'%}"></script>
+</body>
+</html>
