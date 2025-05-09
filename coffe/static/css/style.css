@@ -1,10 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&family=Maname&family=Poiret+One&display=swap');
 *{
     background-color: black;
+}
+.nav{
+    display: flex;
+    gap: 25%;
 }
 .navbar{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.nav span{
+    display: inline-block;
+    font-family: "Hanalei", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    transform: rotate(-18deg) translateX(10%) translateY(10%);
+    background-color: transparent;
+    color: orange;
 }
 .navbar_elements{
     display: flex;
@@ -54,23 +69,18 @@
 }
 .home_text_ h1{
     color: white;
-    font-size: 7rem;
+    font-size: 3rem;
     margin: 0;
+    font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .home_text_ h2{
     color: orange;
-    font-size: 5rem;
+    font-size: 1rem;
+    width: 50%;
     margin: 0;
     font-family: sans-serif;
-}
-.home_text_ span{
-    display: inline-block;
-    font-family: "Hanalei", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 10rem;
-    transform: rotate(-18deg) translateX(10%);
-    background-color: transparent;
 }
 .home_text_ button{
     position: relative;
