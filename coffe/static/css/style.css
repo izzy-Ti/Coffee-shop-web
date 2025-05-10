@@ -5,6 +5,9 @@
 .nav{
     display: flex;
     gap: 25%;
+    position: sticky;
+    top: 0;
+    background-color: black;
 }
 .navbar{
     display: flex;
@@ -127,4 +130,20 @@
     font-family: cursive;
     font-weight: 400;
     font-size: 5rem;
+}
+.product_cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 50px;
+    flex-wrap: wrap;
+}
+.product_items{
+    color: white;
+    border: 2px solid orange;
+    padding: 20px 20px;
+    border-radius: 20px;
+}
+.product_items h2{
+    font-size: 2.5rem;
 }
