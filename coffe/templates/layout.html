@@ -24,6 +24,7 @@
         </nav>
     </section>
     <!--end of navbar section-->
+    {%block content%}
     <!--home section-->
     <section id="home">
         <div class="home_text_">
@@ -44,7 +45,7 @@
                     <h2>{{post.name}}</h2>
                     <h3>{{post.price}}</h3>
                     <div class="text_holder"> 
-                    <p>{{post.description}}</p><button><a href="">Place order</a></button>    
+                    <p>{{post.description}}</p><button><a href="{%url 'order' post.id%}">Place order</a></button>    
                     </div>
                     
                 </div>
@@ -52,6 +53,7 @@
         </div>
     </section>
     <!-- end of product section-->
+    {%endblock%}
 <script src="{% static 'js/js.js'%}"></script>
 </body>
 </html>

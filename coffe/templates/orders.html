@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{%block content%}
+<div class="order_content">
+    <div class="selected_product">
+        <img src="{{order.img2.url}}" alt="" height = "150">
+        <h2>{{orders.name}}</h2>
+        <h3>{{order.price}}</h3>
+        <p>{{order.description}}</p>
+    </div>
+    <div class="personal_info">
+        <form action="" method="POST" class="personal_info_form">
+            <h1>Enter you information</h1>
+            <div class="full_name">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="First name" name="name">
+                <input type="text" placeholder="last name">
+            </div>
+            <div class="phone_number">
+            <label for="phone">Phone number</label>
+            <input type="phone2numeric" placeholder="+251-9XX-XXX-XXX" name =  'phone'>
+            </div>
+            <div class="ship_add">
+            <label for="addres">Addres</label>
+            <input type="text" placeholder="City" name= 'addres'>
+            <input type="text" placeholder="street">
+            </div>
+            <input type="submit" value="Order" class="order_button">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

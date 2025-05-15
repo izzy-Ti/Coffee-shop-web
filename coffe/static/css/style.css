@@ -171,3 +171,58 @@
 .product_items button:hover{
     border: 2px solid orange;
 }
+.order_content{
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+}
+.selected_product{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(23, 23, 23);
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 30px 30px;
+}
+.selected_product *{
+    background-color: rgb(23, 23, 23);
+    color: white;
+    margin: 10px 0px;
+    font-size:1.5rem;
+}
+.selected_product h3{
+    font-size:3rem;
+}
+.personal_info{
+    width: 50%;
+    border: 2px solid orange;
+    padding: 30px 30px;
+    margin: 20px 20px;
+    border-radius: 20px;
+}
+.personal_info_form{
+    display: flex;
+    flex-direction: column;
+}
+.personal_info_form h1{
+    color: white;
+    font-family: cursive;
+}
+.personal_info_form input{
+    background-color: transparent;
+    outline: none;
+    border: 2px solid orange;
+    padding: 20px 20px;
+    margin: 10px 10px;
+    border-radius:10px ;
+    color: white;
+}
+.personal_info_form label{
+    color: gray;
+    font-family: cursive;
+}
+.order_button:hover{
+    background-color: orange;
+    color: white;
+    transition: all 0.5s ease;
+    font-size: 1.5rem;
+}
