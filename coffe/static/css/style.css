@@ -171,6 +171,11 @@
 .product_items button:hover{
     border: 2px solid orange;
 }
+.order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .order_content{
     display: grid;
     grid-template-columns: 0.3fr 1fr;
@@ -193,7 +198,6 @@
     font-size:3rem;
 }
 .personal_info{
-    width: 50%;
     border: 2px solid orange;
     padding: 30px 30px;
     margin: 20px 20px;
@@ -207,6 +211,12 @@
     color: white;
     font-family: cursive;
 }
+.personal_info_form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #000 inset; 
+    -webkit-text-fill-color:white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 .personal_info_form input{
     background-color: transparent;
     outline: none;

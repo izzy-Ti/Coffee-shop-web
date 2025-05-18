@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {%block content%}
+<div class="order">
 <div class="order_content">
     <div class="selected_product">
         <img src="{{order.img2.url}}" alt="" height = "150">
@@ -8,25 +9,30 @@
         <p>{{order.description}}</p>
     </div>
     <div class="personal_info">
-        <form action="" method="POST" class="personal_info_form">
+        <form action="{% url "update_orders" order.product_id %}"  method="POST" class="personal_info_form">
+            {% csrf_token %}
             <h1>Enter you information</h1>
             <div class="full_name">
                 <label for="name">Full Name</label>
                 <input type="text" placeholder="First name" name="name">
-                <input type="text" placeholder="last name">
+                <input type="text" placeholder="last name" name="M_name">
             </div>
             <div class="phone_number">
             <label for="phone">Phone number</label>
             <input type="phone2numeric" placeholder="+251-9XX-XXX-XXX" name =  'phone'>
             </div>
+            <div class="email">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email" name= 'email'>
+            </div>
             <div class="ship_add">
             <label for="addres">Addres</label>
             <input type="text" placeholder="City" name= 'addres'>
-            <input type="text" placeholder="street">
+            <input type="text" placeholder="street" name = 'street'>
             </div>
             <input type="submit" value="Order" class="order_button">
         </form>
     </div>
 </div>
-
+</div>
 {% endblock %}

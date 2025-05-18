@@ -10,4 +10,18 @@ class products(models.Model):
     img2 = models.ImageField(default='fallback.png', blank=True)
     def __str__(self):
         return self.name
+class orders(models.Model):
+    F_name = models.CharField(max_length=50,null=False)
+    M_name = models.CharField(max_length=50,null=False)
+    phone = models.IntegerField(null=False)
+    email = models.CharField(max_length=50, null=False)
+    city = models.CharField( max_length=50)
+    street = models.CharField( max_length=50)
+    def __str__(self):
+        return self.email
+
+
+
+
+
 
