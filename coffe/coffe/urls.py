@@ -8,7 +8,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('order/<int:product_id>/', views.order, name = 'order')
+    path('order/<int:product_id>/', views.order, name = 'order'),
+    path('products/', include(('products.urls', 'products'), namespace='products'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
