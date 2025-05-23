@@ -11,6 +11,7 @@ class products(models.Model):
     def __str__(self):
         return self.name
 class orders(models.Model):
+    product = models.ForeignKey('products', on_delete=models.CASCADE, default='001')
     F_name = models.CharField(max_length=50,null=False)
     M_name = models.CharField(max_length=50,null=False)
     phone = models.IntegerField(null=False)
