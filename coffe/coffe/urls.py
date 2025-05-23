@@ -9,7 +9,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('order/<int:product_id>/', views.order, name = 'order'),
-    path('products/', include(('products.urls', 'products'), namespace='products'))
+    path('', include('products.urls', namespace='orders'))
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

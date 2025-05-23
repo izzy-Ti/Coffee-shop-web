@@ -3,13 +3,13 @@
 <div class="order">
 <div class="order_content">
     <div class="selected_product">
-        <img src="{{order.img2.url}}" alt="" height = "150">
-        <h2>{{orders.name}}</h2>
-        <h3>{{order.price}}</h3>
-        <p>{{order.description}}</p>
+        <img src="{{product.img2.url}}" alt="" height = "150">
+        <h2>{{product.name}}</h2>
+        <h3>{{product.price}}</h3>
+        <p>{{product.description}}</p>
     </div>
     <div class="personal_info">
-        <form action="{% url "products" order.product_id %}"  method="POST" class="personal_info_form">
+        <form action="{% url 'orders:update_orders' product.id %}"  method="POST" class="personal_info_form">
             {% csrf_token %}
             <h1>Enter you information</h1>
             <div class="full_name">
@@ -31,6 +31,7 @@
             <input type="text" placeholder="street" name = 'street'>
             </div>
             <input type="submit" value="Order" class="order_button">
+            <input type="hidden" name="product_id" value="{{ orders.id }}">
         </form>
     </div>
 </div>

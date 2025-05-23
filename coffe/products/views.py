@@ -4,8 +4,8 @@ from .models import orders
 
 
 
-def update_orders(request, stud_id):
-    order = get_object_or_404(orders, stud_Id=stud_id)
+def update_orders(request, product_id):
+    order = get_object_or_404(orders, id = product_id)
     if request.method == "POST":
         order.F_name = request.POST.get("name")
         order.M_name = request.POST.get("M_name")
@@ -14,4 +14,4 @@ def update_orders(request, stud_id):
         order.city = request.POST.get("addres")
         order.street = request.POST.get("street")
         order.save()
-    return redirect('teachers:order_succ')
+    return redirect('products:order_succ')
