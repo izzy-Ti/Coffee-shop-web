@@ -9,7 +9,7 @@
         <p>{{product.description}}</p>
     </div>
     <div class="personal_info">
-        <form action="{% url 'orders:update_orders' product.id %}"  method="POST" class="personal_info_form">
+        <form method="POST" action="{% url 'orders:update_orders' product.id %}" class="personal_info_form">
             {% csrf_token %}
             <h1>Enter you information</h1>
             <div class="full_name">

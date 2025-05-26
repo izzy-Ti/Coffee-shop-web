@@ -1,8 +1,10 @@
-from django.contrib import admin
-from django.urls import path
-from . import views
 
-app_name = 'orders' 
+from django.contrib import admin
+from django.urls import path,include
+from .import views
+
+app_name = 'orders'
+
 urlpatterns = [
-    path('order/<int:product_id>/', views.update_orders, name='update_orders'),
+        path('order', views.update_orders, name='update_orders'),
 ]

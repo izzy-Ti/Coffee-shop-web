@@ -1,8 +1,5 @@
-from django.shortcuts import get_object_or_404,redirect, render
-from .models import orders
-from .models import products
-
-
+from django.shortcuts import render, redirect,get_object_or_404
+from products.models import products, orders
 
 
 def update_orders(request, product_id):
@@ -10,12 +7,12 @@ def update_orders(request, product_id):
         print("Form submitted!")
         product = get_object_or_404(products, id=product_id)
 
-        F_name = request.POST.get("name")
-        M_name = request.POST.get("M_name")
-        phone = request.POST.get("phone")
-        email = request.POST.get("email")
-        city = request.POST.get("address") 
-        street = request.POST.get("street")
+        F_name = request.POST.get('name')
+        M_name = request.POST.get('M_name')
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        city = request.POST.get('address') 
+        street = request.POST.get('street')
 
         order = orders(
             product=product,
@@ -28,4 +25,4 @@ def update_orders(request, product_id):
         )
         order.save()
 
-        return redirect('orders:order_succ')
+        return redirect('home')
