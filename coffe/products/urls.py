@@ -6,5 +6,5 @@ from .import views
 app_name = 'orders'
 
 urlpatterns = [
-        path('order', views.update_orders, name='update_orders'),
+        path('order/<int:product_id>/', views.update_orders, name='update_orders'),
 ]
