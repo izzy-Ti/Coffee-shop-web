@@ -26,3 +26,6 @@ def update_orders(request, product_id):
         order.save()
 
         return redirect('home')
+def order_list(request):
+    order = orders.objects.all()
+    return render(request, 'products/delivery.html')
