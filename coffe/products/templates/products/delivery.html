@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="{% static 'css/cs.css' %}">
 </head>
 <body>
-    
+    <h1 class="main_heading">Orders right now</h1>
+    <div class="orders">
+        <table>
+            {% for list in lists%}
+            <tr>
+                <td>{{list.email}}</td>
+                <td>{{list.F_name}}</td>
+                <td>{{list.M_name}}</td>
+                <td>{{list.product}}</td>
+                <td>{{list.phone}}</td>
+                <td>{{list.city}}</td>
+                <td>{{list.street}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
 </body>
 </html>

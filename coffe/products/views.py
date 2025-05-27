@@ -27,5 +27,5 @@ def update_orders(request, product_id):
 
         return redirect('home')
 def order_list(request):
-    order = orders.objects.all()
-    return render(request, 'products/delivery.html')
+    lists = orders.objects.all()
+    return render(request, 'products/delivery.html', {'lists': lists})
