@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanalei&family=Maname&family=Poiret+One&display=swap');
 *{
     background-color: black;
+    scroll-behavior: smooth;
+    color: white;
 }
 .nav{
     display: flex;
@@ -8,6 +10,8 @@
     position: sticky;
     top: 0;
     background-color: black;
+    z-index: 999;
+
 }
 .navbar{
     display: flex;
@@ -21,8 +25,9 @@
     font-style: normal;
     font-size: 5rem;
     transform: translateX(10%) translateY(10%);
-    background-color: transparent;
+    background-color: black;
     color: orange;
+    z-index: 999;
 }
 .navbar_elements{
     display: flex;
@@ -91,6 +96,7 @@
     text-decoration: none;
     color: #ffffff;
     z-index: 9;
+    background-color: transparent;
 }
 .home_text_ button{
     position: relative;
@@ -119,7 +125,7 @@
     width: 0;
     background: rgb(255, 115, 0);
     transition: all 0.35s ease;
-    z-index: 0;
+    z-index: -1;
 }
 .home_text_ button:hover:after{
     width: 100%;
@@ -244,12 +250,41 @@
     text-align: center;
 }
 .succ_classes h1{
+    margin: 0;
     font-size: 4rem;
     font-family: cursive;
     color: orange;
 }
 .succ_classes h2{
     font-size: 4rem;
+    margin: 0;
     font-family:cursive;
     color: white;
+}
+.about_logo{
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+}
+.about_logo img{
+    margin: 70px 30px;
+}
+.about_para{
+    display: flex;
+    flex-direction: column;
+}
+.about_para h1{
+    font-size: 5rem;
+    font-family: cursive;
+    color: orange;
+    text-align: center;
+    margin: 20px 0;
+}
+.about_para h2 span{
+    font-size: 7rem;
+    color: red;
+}
+.about_para h2{
+    color: white;
+    margin: 50px 50px;
+    font-weight: 20;
 }

@@ -16,9 +16,9 @@
     <span>Kaldis </span>
         <nav class="navbar">
             <ul class="navbar_elements">
-                <li class="navbar_items"><a href="#Home" class="navbar_links">Home</a></li>
-                <li class="navbar_items"><a href="#Products" class="navbar_links">Products</a></li>
-                <li class="navbar_items"><a href="#About" class="navbar_links">About</a></li>
+                <li class="navbar_items"><a href="#home" class="navbar_links">Home</a></li>
+                <li class="navbar_items"><a href="#product" class="navbar_links">Products</a></li>
+                <li class="navbar_items"><a href="#about" class="navbar_links">About</a></li>
                 <li class="navbar_items"><a href="#Contact" class="navbar_links">Contact</a></li>
             </ul>
         </nav>
@@ -30,7 +30,7 @@
         <div class="home_text_">
             <p>Helloo!</p>
             <h1>Start your day with a little <br>cup of comfort</h1>
-            <button><a href="#products">Products</a></button>
+            <button><a href="#product">Products</a></button>
         </div>
         <img src="{%static 'image/coff.jpg'%}" height="850" width="750">
     </section>
@@ -53,6 +53,30 @@
         </div>
     </section>
     <!-- end of product section-->
+     <!--about section-->
+     <section id="about">
+        <div class="about_logo">
+            <img src="{%static 'image/about.jpg'%}" alt="Coffee image" >
+            <div class="about_para">
+                <h1>About</h1>
+                <h2><span>70%</span>off your first cup at Kaldi's 
+                    Coffee – where every sip tells a story. Inspired by
+                    the legendary goat herder Kaldi, who discovered
+                    coffee's energizing power, our shop blends
+                    tradition with modern comfort. Whether you're 
+                    a devoted espresso lover or just looking for 
+                    a cozy spot to unwind, Kaldi's Coffee serves
+                    handpicked, ethically sourced beans brewed to
+                    perfection. From smooth lattes to bold 
+                    pour-overs, we craft each drink with care 
+                    in a welcoming atmosphere made for connection
+                    and calm. Come in for the coffee, stay for 
+                    the community.</h2>
+            </div>
+        </div>
+     </section>
+    <!-- end of about section-->
+
     {%endblock%}
 <script src="{% static 'js/js.js'%}"></script>
 </body>
