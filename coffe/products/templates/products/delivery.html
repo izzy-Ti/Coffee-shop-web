@@ -11,15 +11,20 @@
     <h1 class="main_heading">Orders right now</h1>
     <div class="orders">
         <table>
+            <tr>
+                <td>Email</td>
+                <td>Name</td>
+                <td>Product</td>
+                <td>Phone</td>
+                <td>Address</td>
+            </tr>
             {% for list in lists%}
             <tr>
                 <td>{{list.email}}</td>
-                <td>{{list.F_name}}</td>
-                <td>{{list.M_name}}</td>
+                <td>{{list.F_name}} {{list.M_name}}</td>
                 <td>{{list.product}}</td>
                 <td>{{list.phone}}</td>
-                <td>{{list.city}}</td>
-                <td>{{list.street}}</td>
+                <td>{{list.city}}, {{list.street}}</td>
             </tr>
             {%endfor%}
         </table>

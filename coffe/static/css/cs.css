@@ -20,3 +20,35 @@
     color: white;
     align-items: center;
 }
+.error{
+    color: red;
+}
+.success{
+    color: green;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #000 inset; 
+    -webkit-text-fill-color:white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+form input{
+    background-color: transparent;
+    outline: none;
+    padding: 10px 10px;
+    width: 20%;
+    margin: 10px 10px;
+    border: 2px solid lightblue;
+    border-radius: 5px ;
+    color: white;
+    font-size: 1.5rem;
+}
+form h1{
+    font-family: cursive;
+}
