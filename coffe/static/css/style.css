@@ -3,6 +3,7 @@
     background-color: black;
     scroll-behavior: smooth;
     color: white;
+    margin: 0;
 }
 .nav{
     display: flex;
@@ -287,4 +288,60 @@
     color: white;
     margin: 50px 50px;
     font-weight: 20;
+}
+#contact *{
+    background-color: transparent;
+}
+#contact{
+    background-color: rgb(52, 52, 52);
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+
+}
+.cont_icons h1{
+    font-size: 7rem;
+    font-family: "Hanalei", system-ui;
+    color: orange;
+    margin: 20px 40px;
+    font-weight: 40;
+}
+.social_media a i{
+    margin: 30px 0px;
+}
+.social_media a{
+    font-size: 4rem;
+    text-align: center;
+    margin: 40px 30px;
+    color: gray;
+}
+.social_media p{
+    margin:40px 10px;
+    font-size: 1.5rem;
+    font-weight: 20;
+    color: gray;
+}
+.footer_nav h2{
+    margin: 30px 30px;
+    color: gray;
+    font-size: 3.5rem;
+}
+.footer_nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+}
+.get_in{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+    align-items: center;
+}
+.get_in h2{
+    margin: 30px 30px;
+    color: gray;
+    font-size: 3.5rem;
 }
