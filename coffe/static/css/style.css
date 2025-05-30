@@ -246,9 +246,30 @@
 .succ_classes{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    height: 90vh;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
+}
+.succ_items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.succ_items a{
+    color: black;
+    text-decoration: none;
+    background-color: orange;
+    padding: 20px 20px;
+    border-radius:10px ;
+    font-size: 1.5rem;
+    margin: 50px 50px;
+    width: 20%;
+    transition: all 0.35s ease;
+}
+.succ_items a:hover{
+    background-color: rgb(255, 132, 0);
 }
 .succ_classes h1{
     margin: 0;

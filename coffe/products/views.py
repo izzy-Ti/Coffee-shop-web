@@ -4,14 +4,27 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-
-def succ(request):
-    return render(request, 'products/success.html')
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.template.loader import render_to_string
+def succ(request, order_id):
+    order = get_object_or_404(orders, id=order_id)
+    template = render_to_string('products/email_template.html',
+                                {'name':order.F_name,
+                                'item':order.product
+                                })
+    email = EmailMessage(
+        'Your Coffee Order is Confirmed!',
+        template,
+        settings.EMAIL_HOST_USER,
+        [order.email]
+    )
+    email.send()
+    return render(request, 'products/success.html',{'order': order})
 def update_orders(request, product_id):
     if request.method == 'POST':
         print("Form submitted!")
         product = get_object_or_404(products, id=product_id)
-
         F_name = request.POST.get('name')
         M_name = request.POST.get('M_name')
         phone = request.POST.get('phone')
@@ -30,7 +43,7 @@ def update_orders(request, product_id):
         )
         order.save()
 
-        return redirect('orders:successfull')
+        return redirect('orders:successfull', order_id=order.id)
 @login_required(login_url='orders:login')
 def order_list(request):
     lists = orders.objects.all()
